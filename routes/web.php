@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//TODO: Change this to use the controller function
+Route::get('/recipes', function () {
+    return view('recipes');
+});
