@@ -26,17 +26,17 @@
 
     <div class="container-fluid">
       <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <nav class="col-md-1 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
             @include('inc.sidebarleft')
           </div>
         </nav>
 
-        <main role="main" class="col-md-7 ml-sm-auto col-lg-8 px-4">
+        <main role="main" class="col-md-8 ml-sm-auto px-4">
           @yield('content')
         </main>
 
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar-right">
+        <nav class="col-md-3 d-none d-md-block bg-light sidebar-right">
           <div class="sidebar-sticky">
               @include('inc.sidebarright')
           </div>

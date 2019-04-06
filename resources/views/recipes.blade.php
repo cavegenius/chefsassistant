@@ -1,6 +1,8 @@
 @extends('templates.main')
 
 @section('content')
+<?php //print_r($recipes); ?>
+
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
         <h1 class="h2">Recipes</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -19,14 +21,23 @@
         <table class="table table-striped table-sm">
             <thead>
             <tr>
-                <th>#</th>
-                <th>Header</th>
+                <th>ID</th>
+                <th>Name</th>
                 <th>Header</th>
                 <th>Header</th>
                 <th>Header</th>
             </tr>
             </thead>
             <tbody>
+                @foreach ($recipes as $recipe)
+                    <tr>
+                            <td>{{$recipe->id}}</td>
+                            <td>{{$recipe->name}}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    </tr>
+                @endforeach
             <tr>
                 <td>1,001</td>
                 <td>Lorem</td>

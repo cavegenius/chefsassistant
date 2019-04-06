@@ -1,4 +1,5 @@
 <ul class="nav flex-column">
+    @include('recipes.create')
     <li class="nav-item">
         <a class="nav-link active" href="#">
         <span data-feather="home"></span>

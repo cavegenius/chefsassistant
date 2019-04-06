@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Recipe;
 
 class RecipesController extends Controller
 {
@@ -19,7 +19,9 @@ class RecipesController extends Controller
             return redirect('login');
         }
 
-        return view('recipes');
+        $user = $id = Auth::id();
+        $recipes = Recipe::index($user);
+        return view('recipes')->with('recipes', $recipes);
     }
 
     /**

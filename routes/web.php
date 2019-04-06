@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::get('/recipes', 'recipesController@index');
 
 Auth::routes();
+Route::post('/recipe/submit', 'RecipesController@store');
