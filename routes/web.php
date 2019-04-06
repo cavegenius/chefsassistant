@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 //TODO: Change this to use the controller function
-Route::get('/recipes', function () {
-    return view('recipes');
-});
+
+Route::get('/recipes', 'recipesController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
