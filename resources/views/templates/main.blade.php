@@ -4,6 +4,7 @@
   <head>
     <title>Chef's Assistant</title>
     <link rel="stylesheet" href="/css/app.css" />
+    <script src="/js/app.js"></script>
   </head>
   <body>
     <!--Header-->
@@ -41,7 +42,6 @@
               @include('inc.sidebarright')
           </div>
         </nav>
-    
       </div>
     </div>
   </body>
