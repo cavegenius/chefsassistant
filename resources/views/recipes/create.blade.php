@@ -32,20 +32,20 @@
         <div class="col-8">{{Form::checkbox('private', 'true')}}</div>
     </div>
     <br>
-    <h4>Ingredients</h4>
+    <h4>Ingredients <button  type="button" id="addIngredient" class="fas fa-plus"></button></h4>
     <div class="form-row">
         <div class="col-2">{{Form::text('quantity1', '', ['class' => 'form-control', 'placeholder' => '10'])}}</div>
-        <div class="col-4">{{Form::text('unit1', '', ['class' => 'form-control', 'placeholder' => 'Unit'])}}</div>
+        <div class="col-4">{{Form::text('unit1', '', ['class' => 'form-control unit', 'placeholder' => 'Unit'])}}</div>
         <div class="col-6">{{Form::text('itemName1', '', ['class' => 'form-control', 'placeholder' => 'Ingedient Name'])}}</div>
     </div>
     <br>
-    <h4>Steps</h4>
+    <h4>Steps <i id="addStep" class="fas fa-plus"></i></h4>
     <div class="form-row">
             <div class="col-12">{{Form::textarea('step1', '', ['class' => 'form-control autogrow', 'min-rows' => '1', 'max-rows' => '5', 'rows' => '1', 'placeholder' => 'Step Details'])}}</div>
     </div>
     <br>
     <div>
-        {{Form::submit('Submit', ['class' => 'btn btn-primary float-right'])}}
+        {{Form::submit('Submit', ['type' => 'submit', 'class' => 'btn btn-primary float-right'])}}
     </div>
     <br>
 {!! Form::close() !!}
