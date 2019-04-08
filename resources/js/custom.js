@@ -27,6 +27,21 @@ $(document)
 $(document).ready( function() {
     $( 'body' ).on( 'click', '#addIngredient', function(e) {
         e.preventDefault();
-        console.log('now');
+        
+        let count = $( '#ingredientCount' ).val();
+        count++;
+        $( '#ingredientCount' ).val( count );
+        var content = '<div class="form-row"><div class="col-2"><input class="form-control" placeholder="10" name="quantity'+count+'" type="text" value=""></div><div class="col-4"><input class="form-control unit" placeholder="Unit" name="unit'+count+'" type="text" value=""></div><div class="col-6"><input class="form-control" placeholder="Ingedient Name" name="itemName'+count+'" type="text" value=""></div></div>';
+        $('#ingredients').append( content );
+    });
+
+    $( 'body' ).on( 'click', '#addStep', function(e) {
+        e.preventDefault();
+        
+        let counts = $( '#stepCount' ).val();
+        counts++;
+        $( '#stepCount' ).val( counts );
+        var contents = '<div class="form-row"><div class="col-12"><textarea class="form-control autogrow" min-rows="1" max-rows="5" rows="1" placeholder="Step Details" name="step'+counts+'" cols="50"></textarea></div></div>';
+        $('#steps').append( contents );
     });
 });

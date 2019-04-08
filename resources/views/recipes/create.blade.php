@@ -32,16 +32,22 @@
         <div class="col-8">{{Form::checkbox('private', 'true')}}</div>
     </div>
     <br>
-    <h4>Ingredients <button  type="button" id="addIngredient" class="fas fa-plus"></button></h4>
-    <div class="form-row">
-        <div class="col-2">{{Form::text('quantity1', '', ['class' => 'form-control', 'placeholder' => '10'])}}</div>
-        <div class="col-4">{{Form::text('unit1', '', ['class' => 'form-control unit', 'placeholder' => 'Unit'])}}</div>
-        <div class="col-6">{{Form::text('itemName1', '', ['class' => 'form-control', 'placeholder' => 'Ingedient Name'])}}</div>
+    <div id="ingredients">
+        <h4>Ingredients <button  type="button" id="addIngredient" class="fas fa-plus"></button></h4>
+        {{ Form::hidden('ingredientCount', '1', ['id' => 'ingredientCount']) }}
+        <div class="form-row">
+            <div class="col-2">{{Form::text('quantity1', '', ['class' => 'form-control', 'placeholder' => '10'])}}</div>
+            <div class="col-4">{{Form::text('unit1', '', ['class' => 'form-control unit', 'placeholder' => 'Unit'])}}</div>
+            <div class="col-6">{{Form::text('itemName1', '', ['class' => 'form-control', 'placeholder' => 'Ingedient Name'])}}</div>
+        </div>
     </div>
     <br>
-    <h4>Steps <i id="addStep" class="fas fa-plus"></i></h4>
-    <div class="form-row">
-            <div class="col-12">{{Form::textarea('step1', '', ['class' => 'form-control autogrow', 'min-rows' => '1', 'max-rows' => '5', 'rows' => '1', 'placeholder' => 'Step Details'])}}</div>
+    <div id="steps">
+        <h4>Steps <button  type="button" id="addStep" class="fas fa-plus"></button></h4>
+        {{ Form::hidden('stepCount', '1', ['id'=> 'stepCount']) }}
+        <div class="form-row">
+                <div class="col-12">{{Form::textarea('step1', '', ['class' => 'form-control autogrow', 'min-rows' => '1', 'max-rows' => '5', 'rows' => '1', 'placeholder' => 'Step Details'])}}</div>
+        </div>
     </div>
     <br>
     <div>
