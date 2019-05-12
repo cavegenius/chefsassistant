@@ -14,8 +14,10 @@ class UserRecipes extends Migration
     public function up()
     {
         Schema::create('userRecipes', function (Blueprint $table) {
-            $table->integer('userId');
-            $table->integer('recipeId');
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users');
+            $table->integer('recipeId')->unsigned();
+            $table->foreign('recipeId')->references('id')->on('recipes');
         });
     }
 

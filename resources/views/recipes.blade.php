@@ -23,9 +23,9 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
+                <th>Prep Time</th>
+                <th>Cook Time</th>
+                <th>Have in Inventory</th>
             </tr>
             </thead>
             <tbody>

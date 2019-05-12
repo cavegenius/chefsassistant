@@ -49205,7 +49205,6 @@ $(document).ready(function () {
   });
   $('body').on('click', '#addStep', function (e) {
     e.preventDefault();
-    console.log('noww');
     var counts = $('#stepCount').val();
     counts++;
     $('#stepCount').val(counts);

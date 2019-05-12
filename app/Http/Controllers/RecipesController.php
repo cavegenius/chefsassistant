@@ -42,7 +42,40 @@ class RecipesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
+        $recipe = new Recipe;
+        $recipe->name = $request->input('name');
+        $recipe->prepTime = $request->input('prepTime').$request->input('prepTimeUnit');
+        $recipe->cookTime = $request->input('cookTime').$request->input('cookTimeUnit');
+        $recipe->yield = $request->input('yield');
+        $recipe->description = $request->input('description');
+        $recipe->nutrition = $request->input('nutrition');
+        $recipe->private = $request->input('private') ? 1 : 0;
+        $recipe->save();
+
+        echo $recipe->id;
+
+        /* SAMPLE
+
+
+        // Create a new message
+        $message = new Message;
+        $message->name = $request->input('name');
+        $message->email = $request->input('email');
+        $message->message = $request->input('message');
+
+        // Save Message
+        $message->save();
+        dd($message->id);
+
+
+        // Redirect
+        return redirect('/')->with('status', 'Message Sent');
+        */
     }
 
     /**

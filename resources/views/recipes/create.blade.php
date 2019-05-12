@@ -1,4 +1,6 @@
 {!! Form::open(['url' => 'recipe/submit']) !!}
+    <h2>Add Recipe</h2>
+    <br>
     <h4>Details</h4>
     <div class="form-row">
         <div class="col">{{Form::label('name', 'Name')}}</div>
@@ -55,25 +57,3 @@
     </div>
     <br>
 {!! Form::close() !!}
-<?
-    /*
-        Create Recipe Form front end
-            Recipe Table Info:
-                Name
-                Preparation Time (Make this 2 boxes. one to enter a number and second is a dropdown with valid time measurements. I can concat the 2 behind the scenes to make a string)
-                Cook Time
-                Yield
-                Description
-                Nutritional Information
-                Private? (Checkbox)
-                Source* (Do I need this for manual entry?)
-
-            recipeIngredients
-                Quantity
-                Unit of Measurement (Should be a selection of units or an option to select units. )
-                Ingredient ( This should give the options as they type for existing ingredients. )
-
-            recipeSteps
-                Step text box (Can show a number but it will be in order from top to bottom) 
-    */
-?>
