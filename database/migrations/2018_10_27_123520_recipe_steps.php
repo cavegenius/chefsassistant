@@ -14,7 +14,8 @@ class RecipeSteps extends Migration
     public function up()
     {
         Schema::create('recipeSteps', function (Blueprint $table) {
-            $table->integer('recipeId');
+            $table->integer('recipeId')->unsigned();
+            $table->foreign('recipeId')->references('id')->on('recipes');
             $table->integer('stepNumber');
             $table->string('instructions', 1000);
         });

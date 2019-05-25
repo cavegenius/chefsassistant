@@ -10,7 +10,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    public function userRecipes(){
+    public function recipes(){
         return $this->belongsToMany( 'App\Models\Recipe', 'userRecipes', 'userId', 'recipeId' );
     }
 

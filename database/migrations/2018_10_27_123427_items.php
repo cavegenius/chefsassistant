@@ -16,7 +16,8 @@ class Items extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 45);
-            $table->integer('categoryId');
+            $table->integer('categoryId')->unsigned();
+            $table->foreign('categoryId')->references('id')->on('itemCategories');
             $table->string('description', 255);
         });
     }

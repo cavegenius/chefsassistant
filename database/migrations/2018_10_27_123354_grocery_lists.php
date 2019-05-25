@@ -15,7 +15,8 @@ class GroceryLists extends Migration
     {
         Schema::create('groceryLists', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('userId');
+            $table->integer('userId')->unsigned();
+            $table->foreign('userId')->references('id')->on('users');
             $table->string('name', 45);
             $table->integer('completed');
         });

@@ -14,10 +14,13 @@ class RecipeIngredients extends Migration
     public function up()
     {
         Schema::create('recipeIngredients', function (Blueprint $table) {
-            $table->integer('recipeId');
-            $table->integer('itemId');
+            $table->integer('recipeId')->unsigned();
+            $table->foreign('recipeId')->references('id')->on('recipes');
+            $table->integer('itemId')->unsigned();
+            $table->foreign('itemId')->references('id')->on('items');
             $table->integer('amount');
-            $table->integer('unitId');
+            $table->integer('unitId')->unsigned();
+            $table->foreign('unitId')->references('id')->on('units');
         });
     }
 

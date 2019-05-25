@@ -14,10 +14,13 @@ class GroceryListItems extends Migration
     public function up()
     {
         Schema::create('groceryListItems', function (Blueprint $table) {
-            $table->integer('listId');
-            $table->integer('itemId');
+            $table->integer('listId')->unsigned();
+            $table->foreign('listId')->references('id')->on('groceryLists');
+            $table->integer('itemId')->unsigned();
+            $table->foreign('itemId')->references('id')->on('items');
             $table->integer('quantity');
-            $table->integer('unitId');
+            $table->integer('unitId')->unsigned();
+            $table->foreign('unitId')->references('id')->on('units');
         });
     }
 

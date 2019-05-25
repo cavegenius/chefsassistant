@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\UserRecipe;
 
 class Recipe extends Model
 {
@@ -22,7 +23,10 @@ class Recipe extends Model
     }
 
     public function saveUserRelationship( $userId, $recipeId ) {
-
+        $userRecipe = new UserRecipe;
+        $userRecipe->userId = $userId;
+        $recipeId->recipeId = $recipeId;
+        $recipe->save();
     }
 
 }

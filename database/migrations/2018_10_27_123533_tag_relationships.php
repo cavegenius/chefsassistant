@@ -14,8 +14,10 @@ class TagRelationships extends Migration
     public function up()
     {
         Schema::create('tagRelationships', function (Blueprint $table) {
-            $table->integer('tagId');
-            $table->integer('recipeId');
+            $table->integer('tagId')->unsigned();
+            $table->foreign('tagId')->references('id')->on('tags');
+            $table->integer('recipeId')->unsigned();
+            $table->foreign('recipeId')->references('id')->on('recipes');
         });
     }
 
