@@ -7,7 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class Recipe extends Model
 {
-    
+    public function users() {
+        return $this->belongsToMany( 'App\Models\User', 'userRecipes', 'recipeId', 'userId' );
+    }
+
     public static function index( $user ) {
         //get all the recipes for that user from the userRecipes table then get the recipe names and ids (other items TBD) from the recipes table
         $recipes = DB::table('recipes')
@@ -16,6 +19,10 @@ class Recipe extends Model
             ->get();
         
         return $recipes;
+    }
+
+    public function saveUserRelationship( $userId, $recipeId ) {
+
     }
 
 }

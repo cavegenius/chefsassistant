@@ -19,7 +19,7 @@ class RecipesController extends Controller
             return redirect('login');
         }
 
-        $user = $id = Auth::id();
+        $user = Auth::id();
         $recipes = Recipe::index($user);
         return view('recipes')->with('recipes', $recipes);
     }
@@ -47,6 +47,8 @@ class RecipesController extends Controller
             'description' => 'required'
         ]);
 
+        $user = Auth::id();
+
         $recipe = new Recipe;
         $recipe->name = $request->input('name');
         $recipe->prepTime = $request->input('prepTime').$request->input('prepTimeUnit');
@@ -57,7 +59,11 @@ class RecipesController extends Controller
         $recipe->private = $request->input('private') ? 1 : 0;
         $recipe->save();
 
-        echo $recipe->id;
+        $recipeId =  $recipe->id;
+
+        $recipe->saveUserRelationship( $user, $recipeId );
+        // Now that I have the ID I need to save the other parts
+        // How do I handle the many to many relationships and save them
 
         /* SAMPLE
 
