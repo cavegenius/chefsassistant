@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
 class UnitsSeeder extends Seeder
 {
     /**
@@ -13,102 +12,103 @@ class UnitsSeeder extends Seeder
     {
         \App\Models\Unit::insert([
             'fullName' => 'teaspoon',
-            'Abbreviation' => 'tsp'
+            'Abbreviation' => 'tsp',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'tablespoon',
-            'Abbreviation' => 'tbsp'
+            'Abbreviation' => 'tbsp',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'fluid ounce',
-            'Abbreviation' => 'fl oz'
+            'Abbreviation' => 'fl oz',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'gill',
-            'Abbreviation' => 'gill'
+            'Abbreviation' => 'gill',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'cup',
-            'Abbreviation' => 'c'
+            'Abbreviation' => 'c',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'pint',
-            'Abbreviation' => 'pt'
+            'Abbreviation' => 'pt',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'quart',
-            'Abbreviation' => 'qt'
+            'Abbreviation' => 'qt',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'gallon',
-            'Abbreviation' => 'gal'
+            'Abbreviation' => 'gal',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'milliliter',
-            'Abbreviation' => 'ml'
+            'Abbreviation' => 'ml',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'liter',
-            'Abbreviation' => 'L'
+            'Abbreviation' => 'L',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'deciliter',
-            'Abbreviation' => 'dl'
+            'Abbreviation' => 'dl',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'pound',
-            'Abbreviation' => 'lb'
+            'Abbreviation' => 'lb',
+            'system' => 'Imperial'
         ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'ounce',
-            'Abbreviation' => 'oz'
+            'Abbreviation' => 'oz',
+            'system' => 'Imperial'
         ]);
-
-        \App\Models\Unit::insert([
-            'fullName' => 'milligram',
-            'Abbreviation' => 'mg'
-        ]);
-
-        \App\Models\Unit::insert([
-            'fullName' => 'gram',
-            'Abbreviation' => 'g'
-        ]);
-
-        \App\Models\Unit::insert([
-            'fullName' => 'kilogram',
-            'Abbreviation' => 'kg'
-        ]);
-
-        \App\Models\Unit::insert([
-            'fullName' => 'millimeter',
-            'Abbreviation' => 'mm'
-        ]);
-
-        \App\Models\Unit::insert([
-            'fullName' => 'centimeter',
-            'Abbreviation' => 'cm'
-        ]);
-
-        \App\Models\Unit::insert([
-            'fullName' => 'meter',
-            'Abbreviation' => 'm'
-        ]);
-
         \App\Models\Unit::insert([
             'fullName' => 'inch',
-            'Abbreviation' => 'in'
+            'Abbreviation' => 'in',
+            'system' => 'Imperial'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'milligram',
+            'Abbreviation' => 'mg',
+            'system' => 'Metric'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'gram',
+            'Abbreviation' => 'g',
+            'system' => 'Metric'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'kilogram',
+            'Abbreviation' => 'kg',
+            'system' => 'Metric'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'millimeter',
+            'Abbreviation' => 'mm',
+            'system' => 'Metric'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'centimeter',
+            'Abbreviation' => 'cm',
+            'system' => 'Metric'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'meter',
+            'Abbreviation' => 'm',
+            'system' => 'Metric'
         ]);
     }
 }

@@ -17,6 +17,7 @@ class Units extends Migration
             $table->increments('id');
             $table->string('fullName', 45);
             $table->string('abbreviation', 10);
+            $table->enum('system', ['Imperial', 'Metric']);
         });
     }
 
