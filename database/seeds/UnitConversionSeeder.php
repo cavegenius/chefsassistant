@@ -17,7 +17,6 @@ class UnitConversionSeeder extends Seeder
         $teaspoons = DB::table('units')->where('fullName', 'teaspoon')->value('id');
         $tablespoons = DB::table('units')->where('fullName', 'teaspoon')->value('id');
         $fluidOunce = DB::table('units')->where('fullName', 'fluid ounce')->value('id');
-        $gill = DB::table('units')->where('fullName', 'gill')->value('id');
         $cupMass = DB::table('units')->where('fullName', 'cup (mass)')->value('id');
         $cupVol = DB::table('units')->where('fullName', 'cup (volume)')->value('id');
         $pint = DB::table('units')->where('fullName', 'pint')->value('id');
@@ -42,7 +41,7 @@ class UnitConversionSeeder extends Seeder
         $kiloliter = DB::table('units')->where('fullName', 'kiloliter')->value('id');
 
         // The First ID  multiplied by Factor = Second ID || the Second ID diveded by the Factor = First ID
-
+        // Imperial
         \App\Models\UnitConversion::insert([
             'firstId' => $pinch, //Tablespoons
             'secondId' => $teaspoons, // Teaspoons
@@ -103,6 +102,7 @@ class UnitConversionSeeder extends Seeder
             'secondId' => $cupMass, // Cups
             'factor' => 2 // 
         ]);
+        // Metric
         \App\Models\UnitConversion::insert([
             'firstId' => $milliliter, // Milliliters
             'secondId' => $gram, // Grams
@@ -172,6 +172,17 @@ class UnitConversionSeeder extends Seeder
             'firstId' => $kiloliter, // kiloliters
             'secondId' => $liter, // Liters
             'factor' => 1000 // 
+        ]);
+        // Imperial to Metric and back
+        \App\Models\UnitConversion::insert([
+            'firstId' => $tablespoons, // kiloliters
+            'secondId' => $milliliter, // Liters
+            'factor' => 15 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $teaspoons, // kiloliters
+            'secondId' => $milliliter, // Liters
+            'factor' => 5 // 
         ]);
     }
 }

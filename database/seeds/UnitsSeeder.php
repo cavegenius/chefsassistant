@@ -19,31 +19,25 @@ class UnitsSeeder extends Seeder
         \App\Models\Unit::insert([
             'fullName' => 'pinch',
             'Abbreviation' => 'pinch',
-            'type' => 'Mass',
+            'type' => 'Volume',
             'system' => 'Imperial'
         ]);
         \App\Models\Unit::insert([
             'fullName' => 'teaspoon',
             'Abbreviation' => 'tsp',
-            'type' => 'Mass',
+            'type' => 'Volume',
             'system' => 'Imperial'
         ]);
         \App\Models\Unit::insert([
             'fullName' => 'tablespoon',
             'Abbreviation' => 'tbsp',
-            'type' => 'Mass',
+            'type' => 'Volume',
             'system' => 'Imperial'
         ]);
         \App\Models\Unit::insert([
             'fullName' => 'fluid ounce',
             'Abbreviation' => 'fl oz',
             'type' => 'Volume',
-            'system' => 'Imperial'
-        ]);
-        \App\Models\Unit::insert([
-            'fullName' => 'gill',
-            'Abbreviation' => 'gill',
-            'type' => 'Mass',
             'system' => 'Imperial'
         ]);
         \App\Models\Unit::insert([
@@ -175,6 +169,18 @@ class UnitsSeeder extends Seeder
             'fullName' => 'kiloliter',
             'Abbreviation' => 'kl',
             'type' => 'Volume',
+            'system' => 'Metric'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'Fahrenheit',
+            'Abbreviation' => 'F',
+            'type' => 'Temperature',
+            'system' => 'Imperial'
+        ]);
+        \App\Models\Unit::insert([
+            'fullName' => 'Celsius',
+            'Abbreviation' => 'C',
+            'type' => 'Temperature',
             'system' => 'Metric'
         ]);
     }
