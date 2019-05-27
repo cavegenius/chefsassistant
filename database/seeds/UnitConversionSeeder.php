@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UnitConversionSeeder extends Seeder
 {
@@ -11,71 +12,166 @@ class UnitConversionSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\UnitConversion::insert([
-            'firstId' => 2, //Tablespoons
-            'secondId' => 1, // Teaspoons
-            'factor' => 3 // 3 teaspoons = 1 tablespoon
-        ]);
+        $countImperial = DB::table('units')->where(['fullName' => 'count', 'system' => 'Imperial'])->value('id');
+        $pinch = DB::table('units')->where('fullName', 'pinch')->value('id');
+        $teaspoons = DB::table('units')->where('fullName', 'teaspoon')->value('id');
+        $tablespoons = DB::table('units')->where('fullName', 'teaspoon')->value('id');
+        $fluidOunce = DB::table('units')->where('fullName', 'fluid ounce')->value('id');
+        $gill = DB::table('units')->where('fullName', 'gill')->value('id');
+        $cupMass = DB::table('units')->where('fullName', 'cup (mass)')->value('id');
+        $cupVol = DB::table('units')->where('fullName', 'cup (volume)')->value('id');
+        $pint = DB::table('units')->where('fullName', 'pint')->value('id');
+        $quart = DB::table('units')->where('fullName', 'quart')->value('id');
+        $gallon = DB::table('units')->where('fullName', 'gallon')->value('id');
+        $pound = DB::table('units')->where('fullName', 'pound')->value('id');
+        $ounce = DB::table('units')->where('fullName', 'ounce')->value('id');
+        $countMetric = DB::table('units')->where(['fullName' => 'count', 'system' => 'Metric'])->value('id');
+        $milligram = DB::table('units')->where('fullName', 'milligram')->value('id');
+        $centigram = DB::table('units')->where('fullName', 'centigram')->value('id');
+        $decigram = DB::table('units')->where('fullName', 'decigram')->value('id');
+        $gram = DB::table('units')->where('fullName', 'gram')->value('id');
+        $decagram = DB::table('units')->where('fullName', 'decagram')->value('id');
+        $hectogram = DB::table('units')->where('fullName', 'hectogram')->value('id');
+        $kilogram = DB::table('units')->where('fullName', 'kilogram')->value('id');
+        $milliliter = DB::table('units')->where('fullName', 'milliliter')->value('id');
+        $centiliter = DB::table('units')->where('fullName', 'centiliter')->value('id');
+        $deciliter = DB::table('units')->where('fullName', 'deciliter')->value('id');
+        $liter = DB::table('units')->where('fullName', 'liter')->value('id');
+        $decaliter = DB::table('units')->where('fullName', 'decaliter')->value('id');
+        $hectoliter = DB::table('units')->where('fullName', 'hectoliter')->value('id');
+        $kiloliter = DB::table('units')->where('fullName', 'kiloliter')->value('id');
+
+        // The First ID  multiplied by Factor = Second ID || the Second ID diveded by the Factor = First ID
 
         \App\Models\UnitConversion::insert([
-            'firstId' => 5, // Cups
-            'secondId' => 2, // Tablespoons
-            'factor' => 16 // 16 tablespoons = 1 cup
+            'firstId' => $pinch, //Tablespoons
+            'secondId' => $teaspoons, // Teaspoons
+            'factor' => 16 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 6, // Pints
-            'secondId' => 5, // Cups
-            'factor' => 2 // 2 cups = 1 pint
+            'firstId' => $tablespoons, //Tablespoons
+            'secondId' => $teaspoons, // Teaspoons
+            'factor' => 3 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 7, // Quarts
-            'secondId' => 6, // Pints
-            'factor' => 2 // 2 pints = 1 quart 
+            'firstId' => $cupMass, // Cups
+            'secondId' => $tablespoons, // Tablespoons
+            'factor' => 16 // x Cups * 16 = x Tablespoons
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 8, // Gallons
-            'secondId' => 7, // Quarts
-            'factor' => 4 // 4 quarts = 1 gallon
+            'firstId' => $pint, // Pints
+            'secondId' => $cupVol, // Cups
+            'factor' => 2 // x pint * 2 = x cups
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 5, // cups
-            'secondId' => 3, // Fluid Ounces
-            'factor' => 8 // 8 Fluid Ounces = 1 cup
+            'firstId' => $quart, // Quarts
+            'secondId' => $pint, // Pints
+            'factor' => 2 //  
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 3, // Fluid Ounces
-            'secondId' => 2, // Tablespoons
-            'factor' => 2 // 2 tablespoons = 1 fl oz
+            'firstId' => $gallon, // Gallons
+            'secondId' => $quart, // Quarts
+            'factor' => 4 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 12, // Pounds
-            'secondId' => 13, // Ounces
-            'factor' => 16 // 16 ounces = 1 pound
+            'firstId' => $cupVol, // cups
+            'secondId' => $fluidOunce, // Fluid Ounces
+            'factor' => 8 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 3, // Fluid Ounce
-            'secondId' => 13, // Ounce
-            'factor' => 1 // 1 Fluid Ounce = 1 Ounce
+            'firstId' => $fluidOunce, // Fluid Ounces
+            'secondId' => $tablespoons, // Tablespoons
+            'factor' => 2 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 6, // Pints
-            'secondId' => 12, // Pounds
-            'factor' => 1 // 1 pound = 1 pint
+            'firstId' => $pound, // Pounds
+            'secondId' => $ounce, // Ounces
+            'factor' => 16 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 12, // Pounds
-            'secondId' => 5, // Cups
-            'factor' => 2 // 2 cups = 1 pound
+            'firstId' => $fluidOunce, // Fluid Ounce
+            'secondId' => $ounce, // Ounce
+            'factor' => 1 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 9, // Milliliters
-            'secondId' => 15, // Grams
-            'factor' => 1 // 1 milliliter = 1 gram
+            'firstId' => $pint, // Pints
+            'secondId' => $pound, // Pounds
+            'factor' => 1 // 
         ]);
         \App\Models\UnitConversion::insert([
-            'firstId' => 10, // Liters
-            'secondId' => 16, // Kilograms
-            'factor' => 1 // 1 kilogram = 1 liter
+            'firstId' => $pound, // Pounds
+            'secondId' => $cupMass, // Cups
+            'factor' => 2 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $milliliter, // Milliliters
+            'secondId' => $gram, // Grams
+            'factor' => 1 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $liter, // Liters
+            'secondId' => $kilogram, // Kilograms
+            'factor' => 1 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $milligram, // milligrams
+            'secondId' => $gram, // grams
+            'factor' => 0.001 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $centigram, // centigrams
+            'secondId' => $gram, // grams
+            'factor' => 0.01 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $decigram, // decigrams
+            'secondId' => $gram, // grams
+            'factor' => 0.1 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $decagram, // decagrams
+            'secondId' => $gram, // grams
+            'factor' => 10 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $hectogram, // hectograms
+            'secondId' => $gram, // grams
+            'factor' => 100 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $kilogram, // kilograms
+            'secondId' => $gram, // grams
+            'factor' => 1000 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $milliliter, // milliliters
+            'secondId' => $liter, // Liters
+            'factor' => 0.001 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $centiliter, // centiliters
+            'secondId' => $liter, // Liters
+            'factor' => 0.01 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $deciliter, // deciliters
+            'secondId' => $liter, // Liters
+            'factor' => 0.1 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $decaliter, // decaliters
+            'secondId' => $liter, // Liters
+            'factor' => 10 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $hectoliter, // hectoliters
+            'secondId' => $liter, // Liters
+            'factor' => 100 // 
+        ]);
+        \App\Models\UnitConversion::insert([
+            'firstId' => $kiloliter, // kiloliters
+            'secondId' => $liter, // Liters
+            'factor' => 1000 // 
         ]);
     }
 }

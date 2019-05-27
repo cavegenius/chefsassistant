@@ -14,9 +14,10 @@ class UnitConversions extends Migration
     public function up()
     {
         Schema::create('unitConversions', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('firstId');
             $table->integer('secondId');
-            $table->integer('factor');
+            $table->float('factor', 11, 3);
         });
     }
 
