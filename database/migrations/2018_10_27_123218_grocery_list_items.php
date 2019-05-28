@@ -19,8 +19,7 @@ class GroceryListItems extends Migration
             $table->integer('itemId')->unsigned();
             $table->foreign('itemId')->references('id')->on('items');
             $table->integer('quantity');
-            $table->integer('unitId')->unsigned();
-            $table->foreign('unitId')->references('id')->on('units');
+            $table->string('unit', 20);
         });
     }
 
