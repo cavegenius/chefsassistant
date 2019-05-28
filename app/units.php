@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
-
-class UnitsController extends Controller {
+class units {
     // How will I handle Count?
     public $mass = [
         'pound' => ['abbreviation' => 'lb', 'system' => 'Imperial', 'conversions' => ['to' => 'gram', 'factor'=>453.592]],
@@ -49,10 +47,12 @@ class UnitsController extends Controller {
     public function convertTemperature( $value, $unit ) {
         switch ($unit) {
             case 'Farenheit':
-                return ($value - 32)*5/9;
+                $result = ($value - 32)*5/9;
+                return round($result, 2);
                 break;
             case 'Celsius':
-                return ($value*9/5)+32;
+                $result = ($value*9/5)+32;
+                return round($result, 2);
                 break;
             default:
                return "Invalid unit of measurement for temperature.";
