@@ -21,6 +21,7 @@ class RecipesController extends Controller
 
         $user = Auth::id();
         $recipes = Recipe::index($user);
+        // TODO: get the units to send to the form for options and send to view
         return view('recipes')->with('recipes', $recipes);
     }
 
