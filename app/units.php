@@ -5,38 +5,67 @@ namespace App;
 class units {
     // How will I handle Count?
     public $mass = [
-        'pound' => ['abbreviation' => 'lb', 'system' => 'Imperial', 'conversions' => ['to' => 'gram', 'factor'=>453.592]],
-        'ounce' => ['abbreviation' => 'oz', 'system' => 'Imperial', 'conversions' => ['to' => 'gram', 'factor'=>28.35]],
-        'milligram' => ['abbreviation' => 'mg', 'system' => 'Imperial', 'conversions' => ['to' => 'gram', 'factor'=>0.001]],
-        'centigram' => ['abbreviation' => 'cg', 'system' => 'Metric', 'conversions' => ['to' => 'gram', 'factor'=>0.01]],
-        'decigram' => ['abbreviation' => 'dg', 'system' => 'Metric', 'conversions' => ['to' => 'gram', 'factor'=>0.1]],
-        'gram' => ['abbreviation' => 'g', 'system' => 'Metric', 'conversions' => ['to' => 'ounce', 'factor'=>0.035274]],
-        'decagram' => ['abbreviation' => 'dag', 'system' => 'Metric', 'conversions' => ['to' => 'gram', 'factor'=>10]],
-        'hectagram' => ['abbreviation' => 'hg', 'system' => 'Metric', 'conversions' => ['to' => 'gram', 'factor'=>100]],
-        'kilogram' => ['abbreviation' => 'kg', 'system' => 'Metric', 'conversions' => ['to' => 'gram', 'factor'=>1000]]
+        'pounds' => ['abbreviation' => 'lb', 'system' => 'Imperial', 'conversions' => ['to' => 'grams', 'factor'=>453.592]],
+        'ounces' => ['abbreviation' => 'oz', 'system' => 'Imperial', 'conversions' => ['to' => 'grams', 'factor'=>28.35]],
+        'milligrams' => ['abbreviation' => 'mg', 'system' => 'Imperial', 'conversions' => ['to' => 'grams', 'factor'=>0.001]],
+        'centigrams' => ['abbreviation' => 'cg', 'system' => 'Metric', 'conversions' => ['to' => 'grams', 'factor'=>0.01]],
+        'decigrams' => ['abbreviation' => 'dg', 'system' => 'Metric', 'conversions' => ['to' => 'grams', 'factor'=>0.1]],
+        'grams' => ['abbreviation' => 'g', 'system' => 'Metric', 'conversions' => ['to' => 'ounces', 'factor'=>0.035274]],
+        'decagrams' => ['abbreviation' => 'dag', 'system' => 'Metric', 'conversions' => ['to' => 'grams', 'factor'=>10]],
+        'hectagrams' => ['abbreviation' => 'hg', 'system' => 'Metric', 'conversions' => ['to' => 'grams', 'factor'=>100]],
+        'kilograms' => ['abbreviation' => 'kg', 'system' => 'Metric', 'conversions' => ['to' => 'grams', 'factor'=>1000]]
     ];
     public $volume = [
-        'pinch' => ['abbreviation' => 'pinch', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>.31]],
-        'teaspoon' => ['abbreviation' => 'tsp', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>5]],
-        'tablespoon' => ['abbreviation' => 'tbsp', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>15]],
-        'fluid ounce' => ['abbreviation' => 'fl oz', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>30]],
-        'cup' => ['abbreviation' => 'c', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>225]],
-        'pint' => ['abbreviation' => 'pt', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>500]],
-        'quart' => ['abbreviation' => 'qt', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>1000]],
-        'gallon' => ['abbreviation' => 'gal', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliter', 'factor'=>4000]],
-        'milliliter' => ['abbreviation' => 'ml', 'system' => 'Metric', 'conversions' => ['to' => 'liter', 'factor'=>0.001]],
-        'centiliter' => ['abbreviation' => 'cl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliter', 'factor'=>10]],
-        'deciliter' => ['abbreviation' => 'dl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliter', 'factor'=>100]],
-        'liter' => ['abbreviation' => 'l', 'system' => 'Metric', 'conversions' => ['to' => 'milliliter', 'factor'=>1000]],
-        'decaliter' => ['abbreviation' => 'dal', 'system' => 'Metric', 'conversions' => ['to' => 'milliliter', 'factor'=>10000]],
-        'hectaliter' => ['abbreviation' => 'hl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliter', 'factor'=>100000]],
-        'kiloliter' => ['abbreviation' => 'kl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliter', 'factor'=>1000000]]
+        'pinchs' => ['abbreviation' => 'pinch', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>.31]],
+        'teaspoons' => ['abbreviation' => 'tsp', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>5]],
+        'tablespoons' => ['abbreviation' => 'tbsp', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>15]],
+        'fluid ounces' => ['abbreviation' => 'fl oz', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>30]],
+        'cups' => ['abbreviation' => 'c', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>225]],
+        'pints' => ['abbreviation' => 'pt', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>500]],
+        'quarts' => ['abbreviation' => 'qt', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>1000]],
+        'gallons' => ['abbreviation' => 'gal', 'system' => 'Imperial', 'conversions' => ['to' => 'milliliters', 'factor'=>4000]],
+        'milliliters' => ['abbreviation' => 'ml', 'system' => 'Metric', 'conversions' => ['to' => 'liters', 'factor'=>0.001]],
+        'centiliters' => ['abbreviation' => 'cl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>10]],
+        'deciliters' => ['abbreviation' => 'dl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>100]],
+        'liters' => ['abbreviation' => 'l', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>1000]],
+        'decaliters' => ['abbreviation' => 'dal', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>10000]],
+        'hectaliters' => ['abbreviation' => 'hl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>100000]],
+        'kiloliters' => ['abbreviation' => 'kl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>1000000]]
     ];
     public $temperature = [
         'Fahrenheit' => ['abbreviation' => 'F', 'system' => 'Imperial'],
         'Celsius' => ['abbreviation' => 'C', 'system' => 'Metric']
     ];
 
+    public function getType($unit) {
+        if( array_key_exists( $unit, $mass) ) {
+            return 'mass';
+        } else if(array_key_exists( $unit, $volume) ) {
+            return 'volume';
+        }
+    }
+
+    public function getSystem($unit) {
+        $type = getType($unit);
+        
+        return $$type[$unit]['system'];
+    }
+    
+    /**
+     * Converts a unit of measurement to the opposite system
+     * 
+     * @param $qty
+     * @param $unit
+     * @return float
+     */
+    public function convertSystem($qty, $unit){
+        $type = getType($unit);
+        $system = getSystem($unit);
+
+
+
+    }
+    
     /**
      * Converts a temprature to and from imperial/metric
      * 

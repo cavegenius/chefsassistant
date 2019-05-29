@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\units;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -38,5 +38,19 @@ class convertTemperatureTest extends TestCase
 
         $result = $units->convertTemperature(26, 'Celsius');
         $this->assertEquals($result, 78.8);
+    }
+
+    public function testInvalidUnitTest() {
+        $units = new units;
+
+        $result = $units->convertTemperature(32, 'pounds');
+        $this->assertEquals($result, 'Invalid unit of measurement for temperature.');
+    }
+
+    public function testNaNTest() {
+        $units = new units;
+
+        $result = $units->convertTemperature('a', 'Farenheit');
+        $this->assertEquals($result, '');
     }
 }
