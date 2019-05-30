@@ -16,6 +16,14 @@ class LoginTest extends TestCase {
 
     use RefreshDatabase;
 
+    // TODO: Move this to a more appropriate location when finished debugging
+    public function testCheckEnv() {
+
+        $env = $this->app->environment();
+
+        $this->assertEquals($env, 'testing');
+    }
+
     /**
      * Test a user can view a login form
      * 
