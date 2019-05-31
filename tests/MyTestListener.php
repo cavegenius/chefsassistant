@@ -46,12 +46,12 @@ class MyTestListener implements TestListener
 
     public function startTestSuite(PHPUnit\Framework\TestSuite $suite): void
     {
-        //shell_exec('php artisan config:cache --env=testing');
+        shell_exec('php artisan config:cache --env=testing');
     }
 
     public function endTestSuite(PHPUnit\Framework\TestSuite $suite): void
     {
-        //shell_exec('php artisan config:cache --env=dev');
+        shell_exec('php artisan config:cache --env=dev');
     }
 }
 ?>
