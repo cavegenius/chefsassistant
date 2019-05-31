@@ -59,7 +59,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2018_10_27_122550_recipes',1),(4,'2018_10_27_123218_grocery_list_items',1),(5,'2018_10_27_123354_grocery_lists',1),(6,'2018_10_27_123417_item_categories',1),(7,'2018_10_27_123427_items',1),(8,'2018_10_27_123504_recipe_ingredients',1),(9,'2018_10_27_123520_recipe_steps',1),(10,'2018_10_27_123533_tag_relationships',1),(11,'2018_10_27_123542_tags',1),(12,'2018_10_27_123553_unit_conversions',1),(13,'2018_10_27_123604_units',1),(14,'2019_04_06_112549_user_recipes',2);
+/*INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2018_10_27_122550_recipes',1),(4,'2018_10_27_123218_grocery_list_items',1),(5,'2018_10_27_123354_grocery_lists',1),(6,'2018_10_27_123417_item_categories',1),(7,'2018_10_27_123427_items',1),(8,'2018_10_27_123504_recipe_ingredients',1),(9,'2018_10_27_123520_recipe_steps',1),(10,'2018_10_27_123533_tag_relationships',1),(11,'2018_10_27_123542_tags',1),(12,'2018_10_27_123553_unit_conversions',1),(13,'2018_10_27_123604_units',1),(14,'2019_04_06_112549_user_recipes',2)*/;
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 

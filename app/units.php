@@ -46,7 +46,7 @@ class units {
     }
 
     public function getSystem($unit) {
-        $type = getType($unit);
+        $type = $this->getType($unit);
         
         return $$type[$unit]['system'];
     }
@@ -59,8 +59,8 @@ class units {
      * @return float
      */
     public function convertSystem($qty, $unit){
-        $type = getType($unit);
-        $system = getSystem($unit);
+        $type = $this->getType($unit);
+        $system = $this->getSystem($unit);
 
 
 
