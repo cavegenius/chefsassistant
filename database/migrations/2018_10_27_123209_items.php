@@ -16,9 +16,8 @@ class Items extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 45);
-            $table->integer('categoryId')->unsigned();
-            $table->foreign('categoryId')->references('id')->on('itemCategories');
-            $table->string('description', 255);
+            $table->boolean('ingredient'); // This will determine if it will show on recipes or just groceries
+            $table->boolean('approved');
         });
     }
 

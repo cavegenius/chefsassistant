@@ -14,9 +14,10 @@ class ItemCategories extends Migration
     public function up()
     {
         Schema::create('itemCategories', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 45);
-            $table->string('description', 255);
+            $table->integer('itemId')->unsigned();
+            $table->foreign('itemId')->references('id')->on('items');
+            $table->integer('categoryID')->unsigned();
+            $table->foreign('categoryID')->references('id')->on('categories');
         });
     }
 

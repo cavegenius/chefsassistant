@@ -11,8 +11,7 @@ class Recipes extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('recipes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 45);
@@ -24,6 +23,7 @@ class Recipes extends Migration
             $table->string('source', 500);
             $table->integer('createByUser');
             $table->tinyInteger('private');
+            $table->boolean('approved');
             $table->timestamps();
         });
     }
