@@ -13,6 +13,7 @@ class Categories extends Migration
      */
     public function up()
     {
+        // Since I will be managing categories a description is fine.
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 45);
