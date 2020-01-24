@@ -19,9 +19,9 @@ class Recipes extends Migration
             $table->string('cookTime', 45);
             $table->string('yield', 45);
             $table->string('description', 500);
-            $table->string('nutrition', 500);
-            $table->string('source', 500);
-            $table->integer('createByUser');
+            $table->string('nutrition', 500)->default('');
+            $table->string('source', 500)->default('');
+            $table->integer('createdByUser');
             $table->tinyInteger('private');
             $table->boolean('approved');
             $table->timestamps();

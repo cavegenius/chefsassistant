@@ -33,8 +33,8 @@ class units {
         'kiloliters' => ['abbreviation' => 'kl', 'system' => 'Metric', 'conversions' => ['to' => 'milliliters', 'factor'=>1000000]]
     ];
     public $temperature = [
-        'Fahrenheit' => ['abbreviation' => 'F', 'system' => 'Imperial'],
-        'Celsius' => ['abbreviation' => 'C', 'system' => 'Metric']
+        'fahrenheit' => ['abbreviation' => 'F', 'system' => 'Imperial'],
+        'celsius' => ['abbreviation' => 'C', 'system' => 'Metric']
     ];
 
     public function getType($unit) {

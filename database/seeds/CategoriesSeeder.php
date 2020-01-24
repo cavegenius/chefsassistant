@@ -13,20 +13,16 @@ class CategoriesSeeder extends Seeder
     {
         //
         \App\Models\Category::insert([
-            'name' => 'Fresh vegetables',
-            'descriptions' => ''
+            'name' => 'Fresh vegetables'
         ]);
         \App\Models\Category::insert([
-            'name' => 'Canned foods',
-            'descriptions' => ''
+            'name' => 'Canned foods'
         ]);
         \App\Models\Category::insert([
-            'name' => 'Meat',
-            'descriptions' => ''
+            'name' => 'Meat'
         ]);
         \App\Models\Category::insert([
-            'name' => '',
-            'descriptions' => ''
+            'name' => ''
         ]);
     }
 }
